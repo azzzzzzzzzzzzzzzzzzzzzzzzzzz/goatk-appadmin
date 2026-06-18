@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@700&display=swap");
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue: #2F42A6;
+  --blue-light: #EEF0FA;
+  --teal: #0097A7;
+  --orange: #EA8C1E;
+  --gray-bg: #F3F4F5;
+  --gray-mid: #6B7280;
+  --gray-text: #3D494C;
+  --border: #E5E7EB;
+  --white: #ffffff;
+}
+
+body { font-family: 'Inter', sans-serif; background: var(--gray-bg); color: var(--gray-text); min-height: 100vh; }
+.app-shell { max-width: 412px; margin: 0 auto; min-height: 100vh; display: flex; flex-direction: column; }
+
+.top-bar { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: var(--gray-bg); position: sticky; top: 0; z-index: 10; }
+.back-btn { display: flex; align-items: center; width: 28px; height: 28px; color: var(--gray-text); text-decoration: none; }
+.top-bar-title { font-size: 16px; font-weight: 700; color: var(--gray-text); }
+
+.main-content {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 32px 24px; gap: 32px;
+}
+
+/* Success area dengan bubble dekoratif */
+.success-area {
+  position: relative;
+  width: 200px; height: 200px;
+  display: flex; align-items: center; justify-content: center;
+}
+.bubble {
+  position: absolute; border-radius: 50%;
+}
+.bubble--teal { width: 20px; height: 20px; background: #B2EBF2; top: 20px; right: 20px; }
+.bubble--orange { width: 14px; height: 14px; background: #FFD9A0; top: 30px; right: 50px; }
+.bubble--teal2 { width: 16px; height: 16px; background: #B2EBF2; bottom: 40px; left: 30px; opacity: 0.6; }
+
+.success-icon {
+  width: 120px; height: 120px; border-radius: 50%;
+  background: var(--blue);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 32px rgba(47,66,166,0.3);
+}
+
+.success-text { text-align: center; display: flex; flex-direction: column; gap: 10px; }
+.success-title { font-family: 'Lora', serif; font-size: 26px; font-weight: 700; color: var(--gray-text); }
+.success-desc { font-size: 14px; color: var(--gray-mid); line-height: 1.6; }
+
+/* Info cards */
+.info-row { display: flex; gap: 12px; width: 100%; }
+.info-card { flex: 1; background: var(--white); border-radius: 14px; padding: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+.info-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--gray-mid); margin-bottom: 6px; }
+.info-value { font-size: 16px; font-weight: 700; color: var(--gray-text); }
+
+/* Bottom nav */
+.bottom-nav { position: sticky; bottom: 0; background: var(--white); display: flex; padding: 10px 12px 14px; border-top: 1px solid var(--border); gap: 4px; z-index: 20; border-radius: 24px 24px 0 0; box-shadow: 0 -4px 16px rgba(0,0,0,0.06); }
+.nav-item { flex: 1; text-decoration: none; display: flex; align-items: center; justify-content: center; }
+.nav-pill { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 10px 18px; border-radius: 999px; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: var(--gray-mid); width: 100%; }
+.nav-item--active .nav-pill { background: var(--blue); color: var(--white); }

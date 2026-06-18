@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <title>Detail Produk</title>
+  <link rel="stylesheet" href="detailprodukpenggaris.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- Header -->
+    <header class="top-bar">
+      <a href="beranda.html" class="back-btn" aria-label="Kembali">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </a>
+      <span class="top-bar-title">Detail Produk</span>
+      <div style="width:32px"></div>
+    </header>
+
+    <!-- Main scroll -->
+    <main class="main-scroll">
+
+      <!-- Foto produk -->
+      <div class="product-hero">
+        <img class="product-hero-img" src="../../assets/images/image-penggarisjoyko.svg" alt="Penggaris Joyko" id="hero-img" />
+      </div>
+
+      <!-- Status & stok -->
+      <div class="status-row">
+        <div class="status-col">
+          <p class="status-label">STATUS</p>
+          <span class="status-badge status-badge--red">
+            <span class="dot dot--red"></span> Stok Kritis
+          </span>
+        </div>
+        <div class="stok-col">
+          <p class="status-label">JUMLAH STOK</p>
+          <p class="stok-value" id="stok-value">8</p>
+        </div>
+      </div>
+
+      <!-- Card kelola produk -->
+      <div class="kelola-card">
+        <h1 class="kelola-title">Kelola Produk</h1>
+        <p class="kelola-desc">Perbarui dan lihat spesifikasi untuk item inventaris individu.</p>
+
+        <div class="field-group">
+          <label class="field-label">NAMA PRODUK</label>
+          <div class="field-input" id="field-nama">Penggaris Joyko</div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">KATEGORI</label>
+          <div class="field-input" id="field-kategori">Alat Tulis Kantor</div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">HARGA SATUAN</label>
+          <div class="field-input field-input--price">
+            <span class="price-prefix">Rp</span>
+            <span id="field-harga"> 7.000</span>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">DESKRIPSI</label>
+          <div class="field-input field-input--textarea" id="field-deskripsi">
+            Penggaris plastik berkualitas tinggi dengan tanda-tanda yang jelas. Merek Joyko, panjang 30 cm. Tahan lama dan akurat, cocok untuk penggunaan profesional maupun pelajar.
+          </div>
+        </div>
+
+        <!-- Inventaris saat ini -->
+        <div class="inventaris-box">
+          <div class="inventaris-bar"></div>
+          <div class="inventaris-content">
+            <p class="inventaris-label">INVENTARIS SAAT INI</p>
+            <p class="inventaris-value">Kuantitas: <span id="inventaris-qty">8</span> Units</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="height: 100px;"></div>
+    </main>
+
+    <!-- Bottom CTA -->
+    <div class="bottom-cta">
+      <button class="cta-btn" id="cta-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        <span>Melihat inventaris aktif</span>
+      </button>
+    </div>
+
+  </div>
+  <script src="detailprodukpenggaris.js"></script>
+</body>
+</html>

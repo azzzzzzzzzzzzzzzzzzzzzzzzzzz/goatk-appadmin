@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@700&display=swap");
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue: #2F42A6;
+  --blue-light: #EEF0FA;
+  --green: #16A34A;
+  --green-bg: #DCFCE7;
+  --orange: #EA8C1E;
+  --red: #DC2626;
+  --gray-bg: #F3F4F5;
+  --gray-mid: #6B7280;
+  --gray-text: #3D494C;
+  --border: #E5E7EB;
+  --white: #ffffff;
+  --radius-card: 16px;
+  --shadow-card: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--gray-bg);
+  color: var(--gray-text);
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 412px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Top bar ── */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--gray-bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.back-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px;
+  color: var(--blue);
+  text-decoration: none;
+}
+.back-btn:hover { opacity: 0.7; }
+.top-bar-title {
+  font-weight: 700; font-size: 16px;
+  color: var(--blue);
+}
+
+/* ── Main scroll ── */
+.main-scroll {
+  flex: 1;
+  padding: 8px 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+/* ── Hero foto ── */
+.product-hero {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: #E8EAF0;
+}
+.product-hero-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+/* ── Status row ── */
+.status-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 4px 0;
+}
+.status-col, .stok-col {
+  display: flex; flex-direction: column; gap: 8px;
+}
+.status-label {
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 1px; color: var(--gray-mid);
+}
+.status-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px; font-weight: 600;
+}
+.status-badge--green {
+  background: var(--green-bg);
+  color: var(--green);
+}
+.status-badge--orange {
+  background: #FEF3E2;
+  color: var(--orange);
+}
+.status-badge--red {
+  background: #FEE2E2;
+  color: var(--red);
+}
+.dot {
+  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+}
+.dot--green  { background: var(--green); }
+.dot--orange { background: var(--orange); }
+.dot--red    { background: var(--red); }
+
+.stok-value {
+  font-size: 28px; font-weight: 700;
+  color: var(--blue);
+}
+
+/* ── Kelola card ── */
+.kelola-card {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  padding: 24px 20px;
+  display: flex; flex-direction: column; gap: 20px;
+  box-shadow: var(--shadow-card);
+}
+.kelola-title {
+  font-family: 'Lora', serif;
+  font-size: 24px; font-weight: 700;
+  color: var(--gray-text);
+}
+.kelola-desc {
+  font-size: 13px; color: var(--gray-mid);
+  line-height: 1.5;
+  margin-top: -12px;
+}
+
+/* ── Field ── */
+.field-group {
+  display: flex; flex-direction: column; gap: 6px;
+}
+.field-label {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 1px; color: var(--blue);
+}
+.field-input {
+  background: var(--gray-bg);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 15px; font-weight: 400;
+  color: var(--gray-text);
+  line-height: 1.4;
+  min-height: 48px;
+  display: flex; align-items: center;
+}
+.field-input--price {
+  gap: 8px;
+}
+.price-prefix {
+  font-size: 13px; color: var(--gray-mid); font-weight: 600;
+}
+.field-input--textarea {
+  align-items: flex-start;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* ── Inventaris box ── */
+.inventaris-box {
+  display: flex;
+  background: var(--gray-bg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.inventaris-bar {
+  width: 4px;
+  background: var(--blue);
+  flex-shrink: 0;
+}
+.inventaris-content {
+  padding: 14px 16px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.inventaris-label {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 1px; color: var(--blue);
+}
+.inventaris-value {
+  font-size: 15px; font-weight: 700;
+  color: var(--gray-text);
+}
+
+/* ── Bottom CTA ── */
+.bottom-cta {
+  position: sticky; bottom: 0;
+  padding: 16px 16px 24px;
+  background: transparent;
+  display: flex; justify-content: center;
+}
+.cta-btn {
+  display: flex; align-items: center; gap: 10px;
+  background: #1F2937;
+  color: white;
+  border: none; border-radius: 999px;
+  padding: 14px 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px; font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: background 0.15s;
+}
+.cta-btn:hover { background: #374151; }
+.cta-btn svg { stroke: white; }

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <title>FAQ</title>
+  <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- Header -->
+    <header class="top-bar">
+      <span class="top-bar-title">Pelayanan Pelanggan</span>
+      <div class="top-bar-right">
+        <a href="../Beranda/notifikasi.html" class="icon-btn" aria-label="Notifikasi">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+        </a>
+        <img class="avatar" src="../../assets/images/image-logo.svg" alt="Logo" />
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main-scroll">
+
+      <h1 class="page-title">Chat Pelanggan dan FAQ</h1>
+
+      <!-- Chat aktif card -->
+      <div class="chat-aktif-card">
+        <p class="chat-aktif-label">CHAT AKTIF</p>
+        <p class="chat-aktif-value">12</p>
+        <p class="chat-aktif-sub">Menunggu respon: <span class="chat-aktif-urgent">3 sesi</span></p>
+      </div>
+
+      <!-- Chat Langsung -->
+      <div class="section-header">
+        <h2 class="section-title">Chat Langsung</h2>
+        <span class="badge-live">LIVE</span>
+      </div>
+
+      <div class="chat-list">
+
+        <div class="chat-item chat-item--unread">
+          <div class="chat-avatar chat-avatar--1"></div>
+          <div class="chat-body">
+            <div class="chat-meta">
+              <span class="chat-name">Joni Iskandar</span>
+              <span class="chat-time">Baru Saja</span>
+            </div>
+            <div class="chat-preview-row">
+              <p class="chat-preview">Halo admin, pesanan saya #ORD...</p>
+              <span class="chat-dot"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-divider"></div>
+
+        <div class="chat-item">
+          <div class="chat-avatar chat-avatar--2"></div>
+          <div class="chat-body">
+            <div class="chat-meta">
+              <span class="chat-name">Siti Aminah</span>
+              <span class="chat-time">5 menit lalu</span>
+            </div>
+            <p class="chat-preview">Apakah produk sepatu lari masih...</p>
+          </div>
+        </div>
+
+        <div class="chat-divider"></div>
+
+        <div class="chat-item">
+          <div class="chat-avatar chat-avatar--3"></div>
+          <div class="chat-body">
+            <div class="chat-meta">
+              <span class="chat-name">Rizky Kurniawan</span>
+              <span class="chat-time">1 jam lalu</span>
+            </div>
+            <p class="chat-preview">Terima kasih atas bantuannya min.</p>
+          </div>
+        </div>
+
+        <a href="#" class="lihat-semua">Lihat Semua Percakapan →</a>
+
+      </div>
+
+      <!-- Daftar FAQ -->
+      <a href="daftarfaq.html" class="section-header" style="text-decoration:none;">
+        <h2 class="section-title">Daftar Pertanyaan FAQ</h2>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+      <div class="faq-list">
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-content">
+            <p class="faq-q">Bagaimana cara melacak pesanan saya?</p>
+            <p class="faq-a">Anda dapat melacak pesanan melalui menu "Orders" dengan memasukkan nomor pesanan Anda.</p>
+          </div>
+          <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </div>
+
+        <div class="faq-divider"></div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-content">
+            <p class="faq-q">Apa saja metode pembayaran yang tersedia?</p>
+            <p class="faq-a">Kami menerima transfer bank (BCA, Mandiri, BNI), kartu kredit, dan dompet digital.</p>
+          </div>
+          <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </div>
+
+        <div class="faq-divider"></div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-content">
+            <p class="faq-q">Berapa lama proses pengembalian dana?</p>
+            <p class="faq-a">Proses pengembalian dana biasanya memakan waktu 3-5 hari kerja setelah pengajuan disetujui.</p>
+          </div>
+          <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </div>
+
+        <div class="faq-divider"></div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-content">
+            <p class="faq-q">Apakah saya bisa mengubah alamat pengiriman?</p>
+            <p class="faq-a">Alamat dapat diubah selama status pesanan belum "Dalam Proses". Hubungi admin segera.</p>
+          </div>
+          <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </div>
+
+      </div>
+
+      <!-- Tips Admin -->
+      <div class="tips-box">
+        <svg class="tips-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <div>
+          <p class="tips-title">Tips Admin</p>
+          <p class="tips-text">Update FAQ secara berkala berdasarkan pertanyaan chat yang paling sering muncul.</p>
+        </div>
+      </div>
+
+      <div style="height: 24px;"></div>
+    </main>
+
+    <!-- Bottom nav -->
+    <nav class="bottom-nav">
+      <a href="../Beranda/beranda.html" class="nav-item" id="nav-supply">
+        <div class="nav-pill">
+          <img src="../../assets/icon/icon-supplyabu.svg" width="20" height="20" alt="" />
+          <span>SUPPLY</span>
+        </div>
+      </a>
+      <a href="../Order/order.html" class="nav-item" id="nav-order">
+        <div class="nav-pill">
+          <img src="../../assets/icon/icon-orderabu.svg" width="20" height="20" alt="" />
+          <span>ORDER</span>
+        </div>
+      </a>
+      <a href="faq.html" class="nav-item nav-item--active" id="nav-faq">
+        <div class="nav-pill">
+          <img src="../../assets/icon/icon-FAQputih.svg" width="20" height="20" alt="" />
+          <span>FAQ</span>
+        </div>
+      </a>
+    </nav>
+
+  </div>
+  <script src="faq.js"></script>
+</body>
+</html>

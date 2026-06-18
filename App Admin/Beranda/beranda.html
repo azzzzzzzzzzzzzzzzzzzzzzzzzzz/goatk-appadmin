@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <title>Beranda - Supply</title>
+  <link rel="stylesheet" href="beranda.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- Header -->
+    <header class="top-bar">
+      <div class="top-bar-left">
+        <img class="avatar" src="../../assets/images/image-logo.svg" alt="Logo" />
+        <span class="top-bar-title">Admin Toko</span>
+      </div>
+      <a href="notifikasi.html" class="icon-btn" aria-label="Notifikasi">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+        </svg>
+      </a>
+    </header>
+
+    <!-- Main scroll area -->
+    <main class="main-scroll">
+
+      <!-- Page heading -->
+      <section class="page-heading">
+        <p class="eyebrow">RINGKASAN PERSEDIAAN</p>
+        <h1 class="page-title">Manajemen Supply<br/>Produk</h1>
+      </section>
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-icon stat-icon--blue">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+            </svg>
+          </div>
+          <div>
+            <p class="stat-label">TOTAL STOK</p>
+            <p class="stat-value">1,284</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon--orange">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <div>
+            <p class="stat-label">STOK RENDAH</p>
+            <p class="stat-value">12</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter card -->
+      <div class="filter-card">
+        <div class="search-box">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input class="search-input" type="search" placeholder="Cari nama produk atau SKU..." />
+        </div>
+        <div class="filter-row">
+          <!-- Sort toggle -->
+          <div class="sort-toggle" id="sort-toggle">
+            <button class="sort-opt sort-opt--active" data-sort="az">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M7 12h10M11 18h2"/></svg>
+              <span>A↔Z</span>
+            </button>
+            <button class="sort-opt" data-sort="asc">A-Z ↓</button>
+            <button class="sort-opt" data-sort="desc">Z-A ↑</button>
+          </div>
+          <!-- Custom dropdown -->
+          <div class="custom-select" id="custom-select">
+            <button class="custom-select-trigger" id="select-trigger">
+              <span id="select-label">Semua</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="custom-select-menu" id="select-menu">
+              <li class="select-opt select-opt--active" data-val="Semua">Semua</li>
+              <li class="select-opt" data-val="Alat Tulis Kantor">Alat Tulis Kantor</li>
+              <li class="select-opt" data-val="Arsip & Dokumen">Arsip &amp; Dokumen</li>
+              <li class="select-opt" data-val="Alat Digital">Alat Digital</li>
+              <li class="select-opt" data-val="Lainnya">Lainnya</li>
+            </ul>
+          </div>
+        </div>
+        <div class="checkbox-row">
+          <label class="check-label">
+            <input type="checkbox" class="check-input" id="check-rendah" /> Persediaan rendah
+          </label>
+          <label class="check-label">
+            <input type="checkbox" class="check-input" id="check-tinggi" /> Persediaan tinggi
+          </label>
+        </div>
+      </div>
+
+      <!-- Product grid -->
+      <div class="product-grid" id="product-grid">
+
+        <div class="product-card" data-name="pulpen gel joyko" data-cat="Alat Tulis Kantor" data-stok="520" data-level="tinggi">
+          <div class="product-img-wrap">
+            <img class="product-img" src="../../assets/images/image-pengeljoyko.svg" alt="Pulpen" />
+          </div>
+          <div class="product-info">
+            <p class="product-cat">ALAT TULIS</p>
+            <p class="product-name">Pulpen Gel Joyko</p>
+            <p class="product-stock"><span class="dot dot--green"></span>Stok: 520</p>
+            <a href="#" class="detail-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Detail Stok
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card" data-name="penggaris" data-cat="Alat Tulis Kantor" data-stok="8" data-level="rendah">
+          <div class="product-img-wrap">
+            <span class="badge-kritis">STOK KRITIS</span>
+            <img class="product-img" src="../../assets/images/image-penggarisjoyko.svg" alt="Penggaris" />
+          </div>
+          <div class="product-info">
+            <p class="product-cat">PENGGARIS</p>
+            <p class="product-name">Penggaris</p>
+            <p class="product-stock"><span class="dot dot--red"></span>Stok: 8</p>
+            <a href="detailprodukpenggaris.html" class="detail-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Detail Stok
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card" data-name="muji style a5 notebook" data-cat="Arsip & Dokumen" data-stok="142" data-level="tinggi">
+          <div class="product-img-wrap">
+            <img class="product-img" src="../../assets/images/image-notebook.svg" alt="Muji Style A5 Notebook" />
+          </div>
+          <div class="product-info">
+            <p class="product-cat">ALAT TULIS</p>
+            <p class="product-name">Muji Style A5 Notebook</p>
+            <p class="product-stock"><span class="dot dot--green"></span>Stok: 142</p>
+            <a href="#" class="detail-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Detail Stok
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card" data-name="tip-ex kertas joyko" data-cat="Alat Tulis Kantor" data-stok="35" data-level="rendah">
+          <div class="product-img-wrap">
+            <img class="product-img" src="../../assets/images/image-tipEx.svg" alt="Tip-Ex Kertas Joyko" />
+          </div>
+          <div class="product-info">
+            <p class="product-cat">ALAT TULIS</p>
+            <p class="product-name">Tip-Ex Kertas Joyko</p>
+            <p class="product-stock"><span class="dot dot--orange"></span>Stok: 35</p>
+            <a href="#" class="detail-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Detail Stok
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card" data-name="rotring 600 0.5mm" data-cat="Alat Digital" data-stok="85" data-level="tinggi">
+          <div class="product-img-wrap">
+            <img class="product-img" src="../../assets/images/image-rotring.svg" alt="Rotring 600 0.5mm" />
+          </div>
+          <div class="product-info">
+            <p class="product-cat">ALAT TULIS</p>
+            <p class="product-name">Rotring 600 0.5mm</p>
+            <p class="product-stock"><span class="dot dot--green"></span>Stok: 85</p>
+            <a href="#" class="detail-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Detail Stok
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card" data-name="kertas a4 80gr" data-cat="Arsip & Dokumen" data-stok="45" data-level="tinggi">
+          <div class="product-img-wrap">
+            <img class="product-img" src="../../assets/images/image-kertasA4.svg" alt="Kertas A4 80gr" />
+          </div>
+          <div class="product-info">
+            <p class="product-cat">ALAT TULIS</p>
+            <p class="product-name">Kertas A4 80gr</p>
+            <p class="product-stock"><span class="dot dot--green"></span>Stok: 45</p>
+            <a href="#" class="detail-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Detail Stok
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card" data-name="kertas f4 70gr" data-cat="Arsip & Dokumen" data-stok="70" data-level="tinggi">
+          <div class="product-img-wrap">
+            <img class="product-img" src="../../assets/images/image-kertasF4.svg" alt="Kertas F4 70gr" />
+          </div>
+          <div class="product-info">
+            <p class="product-cat">ALAT TULIS</p>
+            <p class="product-name">Kertas F4 70gr</p>
+            <p class="product-stock"><span class="dot dot--green"></span>Stok: 70</p>
+            <a href="#" class="detail-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Detail Stok
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card" data-name="penggaris plastik" data-cat="Lainnya" data-stok="40" data-level="tinggi">
+          <div class="product-img-wrap">
+            <img class="product-img" src="../../assets/images/image-penggarisanakplastik.svg" alt="penggaris plastik" />
+          </div>
+          <div class="product-info">
+            <p class="product-cat">ALAT TULIS</p>
+            <p class="product-name">Penggaris Plastik</p>
+            <p class="product-stock"><span class="dot dot--green"></span>Stok: 45</p>
+            <a href="#" class="detail-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Detail Stok
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div style="height: 80px;"></div>
+    </main>
+
+    <!-- Bottom nav -->
+    <nav class="bottom-nav">
+      <a href="#" class="nav-item nav-item--active" id="nav-supply">
+        <div class="nav-pill">
+         <img src="../../assets/icon/icon-supplyputih.svg" width="18" height="18" alt="" />
+         <span>SUPPLY</span>
+        </div>
+      </a>
+      <a href="../Order/order.html" class="nav-item" id="nav-order">
+        <div class="nav-pill">
+          <img src="../../assets/icon/icon-orderabu.svg" width="18" height="18" alt="" />
+          <span>ORDER</span>
+        </div>
+      </a>
+      <a href="../FAQ/faq.html" class="nav-item" id="nav-faq">
+        <div class="nav-pill">
+          <img src="../../assets/icon/icon-FAQabu.svg" width="18" height="18" alt="" />
+          <span>FAQ</span>
+        </div>
+      </a>
+    </nav>
+
+  </div>
+  <script src="beranda.js"></script>
+</body>
+</html>

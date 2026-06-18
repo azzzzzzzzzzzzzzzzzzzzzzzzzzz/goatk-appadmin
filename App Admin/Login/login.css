@@ -1,0 +1,668 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  min-height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Inter-Bold", "weight": "700", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: local("Inter-Bold");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Lora-Bold", "weight": "700", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Lora-Bold";
+  src: local("Lora-Bold");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Inter-Regular", "weight": "400", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: local("Inter-Regular");
+}
+/* @FONTWARNING[{"type": "restricted", "family": "Inter-SemiBold", "weight": "600", "style": "normal", "allowsCrossOrigin": false}] */
+
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: local("Inter-SemiBold");
+}
+
+
+:root {
+  --variable-collection-biru-inti: rgba(47, 66, 166, 1);
+  --variable-collection-ijo-oke: rgba(13, 173, 72, 1);
+  --variable-collection-abu-muda-bgt: rgba(243, 244, 245, 1);
+  --variable-collection-abu-muda: rgba(107, 114, 128, 1);
+  --variable-collection-abu-tulisan: rgba(61, 73, 76, 1);
+  --variable-collection-abu-muda-bgt-duplicate: rgba(243, 244, 245, 1);
+  --variable-collection-biru-inti-duplicate: rgba(47, 66, 166, 1);
+  --variable-collection-abu-tulisan-duplicate: rgba(61, 73, 76, 1);
+  --variable-collection-abu-muda-duplicate: rgba(107, 114, 128, 1);
+}
+
+
+.admin-log-in {
+  display: flex;
+  height: 919px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0px 24px 100px;
+  position: relative;
+  background-color: var(--variable-collection-abu-muda-bgt-duplicate);
+  width: 100%;
+  min-width: 412px;
+}
+
+.admin-log-in .frame {
+  display: flex;
+  flex-direction: column;
+  width: 412px;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+.admin-log-in .header-top-logo {
+  display: flex;
+  height: 96px;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 32px 20px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  background-color: #ffffffb2;
+  backdrop-filter: blur(8px) brightness(100%);
+  -webkit-backdrop-filter: blur(8px) brightness(100%);
+}
+
+.admin-log-in .header-top {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 412px;
+  background-color: #ffffff01;
+  box-shadow: 0px 10px 40px -15px #00525f14;
+}
+
+.admin-log-in .container {
+  display: flex;
+  width: 108px;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+}
+
+.admin-log-in .div {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.admin-log-in .update-this-logo-to {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  aspect-ratio: 1;
+}
+
+.admin-log-in .div-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+  margin-right: -47px;
+}
+
+.admin-log-in .text-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 125px;
+  height: 32px;
+  margin-top: -1px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--variable-collection-biru-inti-duplicate);
+  font-size: 20px;
+  letter-spacing: -0.6px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.admin-log-in .main-content-canvas {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: 703px;
+  max-width: 1200px;
+  height: 703px;
+  gap: 64px;
+  padding: 0px 24px;
+}
+
+.admin-log-in .right-column-login {
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  align-self: center;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-log-in .background {
+  display: flex;
+  flex-direction: column;
+  max-width: 448px;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 40px 40px 56px;
+  position: relative;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.admin-log-in .div-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ffffff01;
+  border-radius: 12px;
+  box-shadow: 0px 30px 60px -12px #00525f14;
+}
+
+.admin-log-in .role-selection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 6px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: var(--variable-collection-abu-muda-bgt-duplicate);
+  border-radius: 9999px;
+}
+
+.admin-log-in .button {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  border-radius: 9999px;
+}
+
+.admin-log-in .text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32.14px;
+  height: 20px;
+  margin-top: -1px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--variable-collection-biru-inti-duplicate);
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.admin-log-in .button-2 {
+  all: unset;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 12px 24px;
+  flex: 1;
+  flex-grow: 1;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--variable-collection-biru-inti-duplicate);
+}
+
+.admin-log-in .text-2 {
+  justify-content: center;
+  width: 44.25px;
+  height: 20px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: -1px;
+  white-space: nowrap;
+}
+
+.admin-log-in .container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 0px 0px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.admin-log-in .div-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.admin-log-in .portal-administrator {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: "Lora-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--variable-collection-biru-inti-duplicate);
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+.admin-log-in .silakan-masuk-dengan {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--variable-collection-abu-tulisan-duplicate);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.admin-log-in .form-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.admin-log-in .container-3 {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 80px;
+}
+
+.admin-log-in .email {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 43px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--variable-collection-abu-muda-duplicate);
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.admin-log-in .container-4 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  position: absolute;
+  top: 24px;
+  left: 0;
+}
+
+.admin-log-in .input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 18px 20px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: var(--variable-collection-abu-muda-bgt-duplicate);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.admin-log-in .container-5 {
+  position: relative;
+  flex-grow: 1;
+  border: none;
+  background: none;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--variable-collection-abu-muda-duplicate);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+}
+
+.admin-log-in .icon {
+  position: absolute;
+  height: 64.29%;
+  top: 35.71%;
+  right: 0;
+  width: 20px;
+}
+
+.admin-log-in .container-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.admin-log-in .label-wrapper {
+  display: flex;
+  width: 258px;
+  align-items: center;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.admin-log-in .text-3 {
+  width: 78.38px;
+  height: 16px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--variable-collection-abu-muda-duplicate);
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  line-height: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: -1px;
+  white-space: nowrap;
+}
+
+.admin-log-in .img {
+  position: absolute;
+  height: 69.64%;
+  top: 30.36%;
+  right: 0;
+  width: 16px;
+}
+
+.admin-log-in .link-lupa-kata-sandi-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.admin-log-in .link-lupa-kata-sandi {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 101.44px;
+  height: 16px;
+  margin-top: -1px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--variable-collection-biru-inti-duplicate);
+  font-size: 12px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.admin-log-in .button-3 {
+  all: unset;
+  box-sizing: border-box;
+  padding: 16px 0px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--variable-collection-biru-inti-duplicate);
+}
+
+.admin-log-in .text-wrapper-2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 24px;
+  margin-top: -1px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.admin-log-in .mobile-only-helper {
+  max-width: 320px;
+  align-items: flex-start;
+  padding: 32px 0px 0px;
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.admin-log-in .element-GOAT-k-hak-wrapper {
+  align-items: center;
+  opacity: 0.6;
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.admin-log-in .element-GOAT-k-hak {
+  position: relative;
+  width: 231.62px;
+  height: 39px;
+  margin-top: -1px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 19.5px;
+}
+/* Original CSS should be injected above this comment */
+
+.admin-log-in {
+  min-height: 919px;
+}
+
+.admin-log-in .frame {
+  width: 100%;
+  max-width: 412px;
+}
+
+.admin-log-in .header-top {
+  width: 100%;
+}
+
+.admin-log-in .main-content-canvas {
+  width: 100%;
+  height: auto;
+  min-height: 703px;
+}
+
+.admin-log-in .background {
+  box-shadow: 0px 30px 60px -12px #00525f14;
+}
+
+.admin-log-in .button,
+.admin-log-in .button-2,
+.admin-log-in .button-3,
+.admin-log-in .container-5,
+.admin-log-in .link-lupa-kata-sandi {
+  cursor: pointer;
+}
+
+.admin-log-in .container-5 {
+  width: 100%;
+  min-width: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  color: var(--variable-collection-abu-tulisan-duplicate);
+  outline: none;
+}
+
+.admin-log-in .container-5::placeholder {
+  color: var(--variable-collection-abu-muda-duplicate);
+  opacity: 1;
+}
+
+.admin-log-in .input:focus-within {
+  outline: 2px solid var(--variable-collection-biru-inti-duplicate);
+  outline-offset: 0;
+}
+
+.admin-log-in .link-lupa-kata-sandi {
+  display: inline-flex;
+}
+
+.admin-log-in .link-lupa-kata-sandi:focus-visible,
+.admin-log-in .button:focus-visible,
+.admin-log-in .button-2:focus-visible,
+.admin-log-in .button-3:focus-visible,
+.admin-log-in .container-5:focus-visible {
+  outline: 2px solid var(--variable-collection-biru-inti-duplicate);
+  outline-offset: 2px;
+  border-radius: 12px;
+}
+
+.admin-log-in .button-3 .div-2 {
+  pointer-events: none;
+}
+
+@media (max-width: 411px) {
+  .admin-log-in {
+    min-width: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .admin-log-in .frame {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .admin-log-in .main-content-canvas {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .admin-log-in .background {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Fix logo size */
+.admin-log-in .image-logo {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* Fix icon email & password posisi di dalam input */
+.admin-log-in .container-4 {
+  position: relative;
+}
+
+.admin-log-in .icon-email,
+.admin-log-in .icon-pw {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+/* Fix label PASSWORD rata kiri */
+.admin-log-in .label-wrapper {
+  width: 100%;
+}
+
+.button.active, .button-2.active {
+  background-color: #2F42A6;
+  color: white;
+}
