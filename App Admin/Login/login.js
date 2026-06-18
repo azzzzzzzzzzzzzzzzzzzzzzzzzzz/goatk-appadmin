@@ -36,5 +36,5 @@ btnMasuk.addEventListener('click', (e) => {
     alert('Password tidak boleh kosong!');
     return;
   }
-  window.location.href = '../beranda/beranda.html';
+  window.location.href = '../Beranda/beranda.html';
 });
