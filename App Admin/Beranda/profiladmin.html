@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <title>Profil Admin</title>
+  <link rel="stylesheet" href="profiladmin.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <main class="main-scroll">
+
+      <a href="javascript:history.back()" class="back-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Kembali
+      </a>
+
+      <div class="page-heading">
+        <h1 class="page-title">Profil Admin</h1>
+        <p class="page-desc">Kelola informasi pribadi dan keamanan akun Anda.</p>
+      </div>
+
+      <!-- Foto & Nama -->
+      <div class="card">
+        <div class="card-header card-header--blue">
+          <div class="card-icon card-icon--blue">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <span class="card-header-title">Foto &amp; Nama</span>
+        </div>
+        <div class="card-body">
+
+          <div class="profile-row">
+            <div class="avatar-wrap">
+              <div class="avatar-circle">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+              </div>
+              <button class="avatar-edit-btn" aria-label="Ubah foto">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="profile-info">
+              <p class="profile-name">Admin GOAT.k</p>
+              <span class="profile-badge">Super Admin</span>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">NAMA DEPAN</label>
+            <input type="text" class="field-input" value="Admin" />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">NAMA BELAKANG</label>
+            <input type="text" class="field-input" value="GOAT.k" />
+          </div>
+
+          <button class="btn-simpan" onclick="simpanInfo('Foto & Nama')">Simpan Perubahan</button>
+        </div>
+      </div>
+
+      <!-- Email & HP -->
+      <div class="card">
+        <div class="card-header card-header--teal">
+          <div class="card-icon card-icon--teal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 7l9 6 9-6"/>
+            </svg>
+          </div>
+          <span class="card-header-title">Email &amp; Nomor HP</span>
+        </div>
+        <div class="card-body">
+
+          <div class="field-group">
+            <label class="field-label">EMAIL</label>
+            <input type="email" class="field-input" value="admingoat.k@gmail.com" />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">NOMOR HP</label>
+            <input type="tel" class="field-input" value="+62 812 3456 7890" />
+          </div>
+
+          <button class="btn-simpan" onclick="simpanInfo('Email & Nomor HP')">Simpan Perubahan</button>
+        </div>
+      </div>
+
+      <!-- Ganti Password -->
+      <div class="card">
+        <div class="card-header card-header--orange">
+          <div class="card-icon card-icon--orange">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <span class="card-header-title">Ganti Password</span>
+        </div>
+        <div class="card-body">
+
+          <div class="field-group">
+            <label class="field-label">PASSWORD SAAT INI</label>
+            <input type="password" class="field-input" value="password" />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">PASSWORD BARU</label>
+            <input type="password" class="field-input" id="pw-baru" placeholder="Minimal 8 karakter" oninput="cekKekuatan()" />
+            <div class="strength-bar">
+              <div class="strength-seg" id="seg1"></div>
+              <div class="strength-seg" id="seg2"></div>
+              <div class="strength-seg" id="seg3"></div>
+            </div>
+            <p class="strength-label" id="strength-label">Kekuatan: -</p>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">KONFIRMASI PASSWORD BARU</label>
+            <input type="password" class="field-input" placeholder="••••••••" />
+          </div>
+
+          <button class="btn-simpan" onclick="simpanInfo('Password')">Simpan Perubahan</button>
+        </div>
+      </div>
+
+      <!-- Zona Berbahaya -->
+      <div class="card card--danger">
+        <div class="card-header card-header--danger">
+          <span class="card-header-title card-header-title--danger">Zona Berbahaya</span>
+        </div>
+        <div class="card-body">
+          <p class="danger-title">Keluar dari semua perangkat</p>
+          <p class="danger-desc">Putuskan sesi masuk aktif di semua perangkat lain kecuali yang sedang digunakan.</p>
+          <button class="btn-danger" onclick="logoutSemua()">Logout Semua</button>
+        </div>
+      </div>
+
+      <div style="height: 32px;"></div>
+    </main>
+
+  </div>
+  <script src="profiladmin.js"></script>
+</body>
+</html>
